@@ -4,7 +4,7 @@ let nombreCompleto = nombre + " " + apellido;
 alert ("¡Bienvenido! " + nombreCompleto);
 
 let pedirPrestamo = prompt("¿Le gustaría solicitar un préstamo con nosotros? (Si, No)").toUpperCase();
-let valorPrestamo;
+let valorPrestamo; 
 
 const TNA = 138;
 const TEA = 268;
@@ -12,6 +12,7 @@ const CFTEA = 376;
 const maximoSolicitado = 2000000;
 let interesCuota;
 
+/* let pedirPrestamo = ingresarPrestamo(); */
 if (pedirPrestamo == "SI"){
     valorPrestamo = parseFloat(prompt("¡Genial! Indíquenos la suma a la cual quiere acceder (Máx: $"+ maximoSolicitado + ")"));
     while(valorPrestamo > maximoSolicitado){
@@ -24,14 +25,9 @@ if (pedirPrestamo == "SI"){
     alert(`Muy bien, $${valorPrestamo} serán depositados en su cuenta bancaria`);
 }else{
     alert("¡Lo invitamos a seguir navegando!");
-}
+} 
 
-let cantidadCuotas = parseInt(prompt("Indique la cantidad de cuotas (12/24/36):"));
-
-while(cantidadCuotas != 12 && cantidadCuotas != 24 && cantidadCuotas != 36){
-    alert("Por favor, ingrese la cantidad de cuotas permitidas");
-    let cantidadCuotas = parseInt(prompt("Indique la cantidad de cuotas (12/24/36):"))
-}
+let cantidadCuotas = cuotas();
 
 if(cantidadCuotas == 12){
     interesCuota = 30;
@@ -56,4 +52,4 @@ let interesCfteaCuota = (cuotaPura * cfteaCuota) / 100;
 
 let valorCuota = cuotaPura + interesPorCuota + interesTnaCuota + interesTeaCuota + interesCfteaCuota;
 
-alert(`Su préstamo de $${valorPrestamo} será devuelto en ${cantidadCuotas} cuotas con un interés del ${interesCuota}%. Cada cuota tendrá un valor de $${valorCuota}`)
+alert(`Su préstamo de $${valorPrestamo} será devuelto en ${cantidadCuotas} cuotas con un interés del ${interesCuota}%. Cada cuota tendrá un valor de $${valorCuota.toFixed(2)}`)
