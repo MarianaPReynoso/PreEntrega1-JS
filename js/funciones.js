@@ -3,7 +3,11 @@ function cuotas(){
 
     while(cantidadCuotas != 12 && cantidadCuotas != 24 && cantidadCuotas != 36){
         alert("Por favor, ingrese la cantidad de cuotas permitidas");
-        let cantidadCuotas = parseInt(prompt("Indique la cantidad de cuotas (12/24/36):"))
+        cantidadCuotas = parseInt(prompt("Indique la cantidad de cuotas (12/24/36):"));
+
+        if (cantidadCuotas == 12 && cantidadCuotas == 24 && cantidadCuotas == 36){
+            break;
+        }
     }
 
     return cantidadCuotas;

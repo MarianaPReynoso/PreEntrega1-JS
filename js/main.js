@@ -28,12 +28,12 @@ if (pedirPrestamo == "SI"){
     let cantidadCuotas = cuotas();
 
     if(cantidadCuotas == 12){
-            interesCuota = 30;
-        } else if (cantidadCuotas == 24){
-            interesCuota = 40;
-        } else {
-            interesCuota = 50;
-        }
+        interesCuota = 30;
+    } else if (cantidadCuotas == 24){
+        interesCuota = 40;
+    } else {
+        interesCuota = 50;
+    }
 
     let cuotaPura = valorPrestamo / cantidadCuotas;
     let interesPrestamo = interesCuota / cantidadCuotas;
@@ -51,19 +51,4 @@ if (pedirPrestamo == "SI"){
     alert(`Su préstamo de $${valorPrestamo} será devuelto en ${cantidadCuotas} cuotas con un interés del ${interesCuota}%. Cada cuota tendrá un valor de $${valorCuota.toFixed(2)}`)
 }else{
     alert("¡Lo invitamos a seguir navegando!");
-} 
-
-/* let cuotaPura = valorPrestamo / cantidadCuotas;
-let interesPrestamo = interesCuota / cantidadCuotas;
-let tnaCuota = TNA / cantidadCuotas;
-let teaCuota = TEA / cantidadCuotas;
-let cfteaCuota = CFTEA / cantidadCuotas;
-
-let interesPorCuota = (cuotaPura * interesPrestamo) / 100;
-let interesTnaCuota = (cuotaPura * tnaCuota) / 100;
-let interesTeaCuota = (cuotaPura * teaCuota) / 100;
-let interesCfteaCuota = (cuotaPura * cfteaCuota) / 100;
-
-let valorCuota = cuotaPura + interesPorCuota + interesTnaCuota + interesTeaCuota + interesCfteaCuota; */
-
-/* alert(`Su préstamo de $${valorPrestamo} será devuelto en ${cantidadCuotas} cuotas con un interés del ${interesCuota}%. Cada cuota tendrá un valor de $${valorCuota.toFixed(2)}`) */
+}
